@@ -4,7 +4,7 @@
       Output: product line totals (double)
 */
 function calculateProdTotal (price, quantity) {
-    return 0;   // replace this!
+    return price * quantity;   // replace this!
 }
 
 /* 2. Complete the function below to calculate gross cart totals

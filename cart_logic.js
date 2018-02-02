@@ -16,7 +16,10 @@ function calculateProdTotal (price, quantity) {
             always have 3 elements (i.e., bananas, oranges, apples)
 */
 function calculateSubtotal (prodTotals) {
-    return 0;   // replace this!
+    var x = prodTotals[0] + prodTotals[1] + prodTotals[2];
+    console.log[prodTotals];
+
+    return (x);   
 }
 
 /* 3. Complete the function below to calculate added taxes
@@ -25,7 +28,8 @@ function calculateSubtotal (prodTotals) {
       Output: added taxes for the cart (double)
 */
 function calculateTaxes(grossTotal, taxRate) {
-    return 0;   // replace this!
+    
+    return grossTotal * taxRate;   
 }
 
 /* 4. Complete the function below to calculate total
@@ -35,7 +39,7 @@ function calculateTaxes(grossTotal, taxRate) {
       Output: total cart amount inclusive of shipping and taxes (double)
 */
 function calculateTotal (grossTotal, addedShipping, addedTax) {
-    return 0;   // replace this!
+    return (grossTotal + addedShipping + addedTax);   
 }
 
 /* 5. We want to inform the users when certain items run out of stock
@@ -62,5 +66,15 @@ function calculateTotal (grossTotal, addedShipping, addedTax) {
 
 */
 function updateProdAvailability(product, selected, availability) {
-    return; // replace this!
+    if (selected > (availability-1)) {
+        updateProdAvailabilityLabel(product, "Out of Stock", OUT_OF_STOCK)
+    }
+
+    else if (selected >= (availability-5)){
+        updateProdAvailabilityLabel(product, "Limited Supply", LIMITED_SUPPLY)
+    }
+
+    else {
+    updateProdAvailabilityLabel(product,"In Stock",AVAILABLE)
+}
 }
